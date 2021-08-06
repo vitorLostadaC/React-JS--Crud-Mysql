@@ -33,12 +33,31 @@ export default function FormDialog(props) {
       name: editValues.name,
       cost: editValues.cost,
       category: editValues.category,
-    }).then(() => {});
+    }).then(() => {
+      props.setListCard(
+        props.listCard.map((value) => {
+          return value.id == editValues.id
+            ? {
+                id: editValues.id,
+                name: editValues.name,
+                cost: editValues.cost,
+                category: editValues.category,
+              }
+            : value;
+        })
+      );
+    });
     handleClose();
   };
 
   const handleDeleteGame = () => {
-    Axios.delete(`http://localhost:3001/delete/${editValues.id}`);
+    Axios.delete(`http://localhost:3001/delete/${editValues.id}`).then(() => {
+      props.setListCard(
+        props.listCard.filter((value) => {
+          return value.id != editValues.id;
+        })
+      );
+    });
     handleClose();
   };
 
