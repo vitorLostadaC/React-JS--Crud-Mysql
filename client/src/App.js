@@ -75,6 +75,7 @@ export default function App() {
           Cadastrar
         </button>
       </div>
+
       {listCard.map((val) => (
         <Card
           listCard={listCard}
