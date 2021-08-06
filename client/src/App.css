@@ -3,11 +3,17 @@
   padding: 0;
 }
 
+.app-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .register-container {
   padding: 10px 20px;
   width: max-content;
   height: max-content;
-  margin: auto;
+
   margin-top: 20px;
   border: 3px solid black;
   border-radius: 5px;
