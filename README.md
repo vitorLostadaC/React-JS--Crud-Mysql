@@ -6,22 +6,37 @@
 
 ## Installation
 
-  1. `$ npm install` or `$ yarn install`
-  2. `$ npm start` or `$ yarn start`
+### Client
 
+  1. `$ cd client`
+  2. `$ npm install` or `$ yarn install`
+  3. `$ npm start` or `$ yarn start`
+  
+### Server
+
+  1. Change your mySQL database data `server/index.js`
+  2. `$ cd server`
+  3. `$ npm install` or `$ yarn`
+  4. `$ npm rum devStart`
+  
 ## Functionalities
 
-  + Move cards between lists.
-  + Move cards between them.
-  + Click to edit the cards.
-  + Add cards.
-  + Delete cards.
-  + Term coloring according to your state. (pending, today, late).
+  + Create games in the database
+  + Read games in the database
+  + Update games in the database
+  + Delete games in the database
+  + Click card to edit and delete
   
 ## Used Libraries
 
- + `react-dnd`
- + `react-dnd-html5-backend`
- + `immer`
+### Front-end
+
  + `@material-ui`
- + `uuid`
+ +  `Axios`
+
+### Back-end
+
++ `express`
++ `mysql`
++ `nodemon`
++ `cors`
